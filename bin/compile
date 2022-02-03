@@ -82,7 +82,7 @@ for t in ${PROJECTS[@]}; do
   PARSEDPROJECTPATH=${t}
   PARSEPROJECTNAME=$(basename ${PARSEDPROJECTPATH%.*})
 
-  dotnet publish ${PARSEDPROJECTPATH} -o ${BUILD_DIR}/TEMP_${PARSEPROJECTNAME} --runtime linux-x64  --self-contained
+  dotnet publish ${PARSEDPROJECTPATH} -o ${BUILD_DIR}/TEMP_${PARSEPROJECTNAME} --runtime linux-x64
   cp ${BUILD_DIR}/TEMP_${PARSEPROJECTNAME}/${PARSEPROJECTNAME}.dll ./${OUTPUT_DIR}/bots/${PARSEPROJECTNAME}.dll
   rm -r ${BUILD_DIR}/TEMP_${PARSEPROJECTNAME}
 done
