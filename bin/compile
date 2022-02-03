@@ -12,6 +12,10 @@ if [ "$STACK" == "cedar-14" ]; then
 	exit 1
 fi
 
+info "custom data"
+info ${PROJECTSLINE}
+info "-------"
+
 ### Configure directories
 BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
